@@ -1,0 +1,258 @@
+<html>
+<head>
+<style>
+.neck
+{
+    position: absolute;
+}
+td
+{
+    text-align: center;
+    vertical-align: middle;
+}
+table.fretboard
+{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    border-collapse: collapse;
+}
+td.fretboard
+{
+    border-right: 1px solid;
+}
+table.strings
+{
+    z-index: 1;
+    position: relative;
+    top: 0;
+    border-bottom: 1px solid;
+    border-collapse: collapse;
+}
+td.strings
+{
+    border-top: 1px solid;
+}
+</style>
+</head>
+<body>
+<div class=neck>
+    <table id=fretboard class=fretboard columns=13 rows=6>
+        <tr>
+            <td class=fretboard width=200 height=40></td>
+            <td class=fretboard width=189></td>
+            <td class=fretboard width=178></td>
+            <td class=fretboard width=168></td>
+            <td class=fretboard width=159></td>
+            <td class=fretboard width=150></td>
+            <td class=fretboard width=141></td>
+            <td class=fretboard width=133></td>
+            <td class=fretboard width=126></td>
+            <td class=fretboard width=119></td>
+            <td class=fretboard width=112></td>
+            <td class=fretboard width=106></td>
+            <td class=fretboard width=100></td>
+        </tr>
+        <tr><td class=fretboard height=40></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td>
+        <td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td></tr>
+        <tr><td class=fretboard height=40></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td>
+        <td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td></tr>
+        <tr><td class=fretboard height=40></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td>
+        <td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td></tr>
+        <tr><td class=fretboard height=40></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td>
+        <td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td></tr>
+        <tr><td class=fretboard height=40></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td>
+        <td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td><td class=fretboard></td></tr>
+    </table>
+    <table class=strings columns=13 rows=7>
+        <tr><td class=strings height=20 colspan=13></td></tr>
+        <tr><td class=strings height=40 colspan=13></td></tr>
+        <tr><td class=strings height=40 colspan=13></td></tr>
+        <tr>
+            <td class=strings height=40 width=200></td>
+            <td class=strings width=189></td>
+            <td class=strings width=178></td>
+            <td class=strings width=168></td>
+            <td class=strings width=159></td>
+            <td class=strings width=150>O</td>
+            <td class=strings width=141></td>
+            <td class=strings width=133>O</td>
+            <td class=strings width=126></td>
+            <td class=strings width=119></td>
+            <td class=strings width=112></td>
+            <td class=strings width=106></td>
+            <td class=strings width=100></td>
+        </tr>
+        <tr><td class=strings height=40 colspan=13></td></tr>
+        <tr><td class=strings height=40 colspan=13></td></tr>
+        <tr><td class=strings height=20 colspan=13></td></tr>
+    </table>
+    <table id=chord class=chord>
+        <tr><td></td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td></tr>
+        <tr><td>major</td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td></tr>
+        <tr><td>minor</td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td></tr>
+        <tr><td>7</td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td></tr>
+        <tr><td>major 7</td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td></tr>
+        <tr><td>minor 7</td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td><td class=chord></td></tr>
+    </table>
+    <table id=notes>
+        <tr><td>root</td><td>m2</td><td>2</td><td>m3</td><td>3</td><td>4</td><td>a4</td><td>5</td><td>m6</td><td>6</td><td>m7</td><td>7</td></tr>
+        <tr><td>8</td><td>b9</td><td>9</td><td>b10</td><td>10</td><td>11</td><td>#11</td><td>12</td><td>b13</td><td>13</td><td>b14</td><td>14</td></tr>
+        <tr><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td></tr>
+        <tr><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td></tr>
+        <tr><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td></tr>
+        <tr><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td></tr>
+        <tr><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td></tr>
+        <tr><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td></tr>
+        <tr><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td></tr>
+        <tr><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td></tr>
+        <tr><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td></tr>
+        <tr><td>F#</td><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td></tr>
+        <tr><td>G</td><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td></tr>
+        <tr><td>G#</td><td>A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td></tr>
+    </table>
+</div>
+<script type="text/javascript">
+    var intvs = Array("r", "m2", "2", "m3", "3", "4", "a4", "5", "m6", "6", "m7", "7", "8", "b9", "9", "b10", "10", "11", "#11", "12", "b13", "13", "b14", "14")
+    var notes = Array("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B");
+    var lit   = Array( 1 ,  0  ,  0 ,  0  ,  2 ,  0 ,  0  ,  3 ,  0  ,  0 ,  0  ,  0 );
+    var tuning = Array(4, 11, 7, 2, 9, 4);
+    var colours = Array("white", "red", "green", "blue", "purple");
+    var chords = Array(Array(0, 4, 7), Array(0, 3, 7), Array(0, 4, 7, 10), Array(0, 4, 7, 11), Array(0, 3, 7, 10));
+    var fretboard = document.getElementById("fretboard");
+    var chordgrid = document.getElementById("chord");
+    var notegrid  = document.getElementById("notes");
+    var lightnote;
+    var stringfret;
+    function noteat(x, y)
+    {
+        return (tuning[y]+x) % 12;
+    }
+    function donotes()
+    {
+        for (var y = 0; y < 6; ++y)
+        {
+            for (var x = 0; x < 13; ++x)
+            {
+                var n = (tuning[y]+x) % 12;
+                var cell = fretboard.rows[y].cells[x];
+                cell.innerText = notes[n];
+                cell.style.background = colours[lit[n]];
+                cell.onclick = lightnote(n);
+            }
+        }
+        for (var y = 0; y < 12; ++y)
+        {
+            for (var x = 0; x < 12; ++x)
+            {
+                var n = (x+y+9) % 12;
+                var cell = notegrid.rows[y+2].cells[x];
+                cell.innerText = notes[n];
+                cell.style.background = colours[lit[n]];
+                cell.onclick = lightnote(n);
+            }
+        }
+    }
+    lightnote = function(n)
+    {
+        function go()
+        {
+            if (lit[n] == 0) lit[n] = 1; else lit[n] = 0;
+            var y = 0;
+            for (var x = 0; x < 12; ++x)
+            {
+                if (lit[x] > 0)
+                {
+                    ++y;
+                    lit[x] = y;
+                }
+            }
+            donotes();
+        }
+        return go;
+    }
+    function inc(string)
+    {
+        if (string >= 6) return false;
+        for (var x = stringfret[string] + 1; x < 13; ++x)
+        {
+            if (lit[noteat(x, string)])
+            {
+                stringfret[string] = x;
+                return true;
+            }
+        }
+        let ok = inc(string + 1);
+        for (var x = 0; x < stringfret[string]; ++x)
+        {
+            if (lit[noteat(x, string)])
+            {
+                stringfret[string] = x;
+                return ok;
+            }
+        }
+        return false;
+    }
+    function bestchord()
+    {
+        stringfret = Array(0, 0, 0, 0, 0, 0);
+        let stringsort = Array(0, 0, 0, 0, 0, 0);
+        let stringdone = Array(0, 0, 0, 0, 0, 0);
+        let stringfinger = Array(0, 0, 0, 0, 0, 0);
+        for (var x = 0; x < 6; ++x) stringfret[x] = 0;
+        for (var x = 0; x < 6; ++x) inc(x);
+        while (true)
+        {
+            let n = 0;
+            for (var x = 0; x < 6; ++x)
+            {
+                stringsort[x] = Array(stringfret[x], -x);
+                stringdone[x] = false;
+            }
+            stringsort.sort();
+            for (var x = 5; x >= 0; --x)
+            {
+                fret = stringsort[x][0];
+                string = -stringsort[x][1];
+                if (fret > 0 && !stringdone[string])
+                {
+                    ++n;
+                    let barre = true;
+                    for (let y = 0; y < string; ++y)
+                    {
+                        if (stringfret[y] > -1 && stringfret[y] < fret) barre = false;
+
+                    }
+                    if (barre)
+                    {
+                        for (var y = 0; y < string; ++y)
+                        {
+                            if (stringfret[y] == fret) stringdone[y] = true;
+                        }
+                    }
+                }
+            }
+            inc(0);
+        }
+    }
+    function dochord(chord, transpose)
+    {
+        function go()
+        {
+            for (var n = 0; n < 12; ++n) lit[n] = 0;
+            chord.forEach(function(n, x) { lit[(n+transpose) % 12] = x+1;});
+            donotes();
+        }
+        return go;
+    }
+    for (var y = 0; y < 5; ++y)
+    {
+        for (var x = 0; x < 12; ++x)
+        {
+            chordgrid.rows[y+1].cells[x+1].onclick = dochord(chords[y], x);
+        }
+    }
+    donotes();
+</script>
+</body>
+</html>
