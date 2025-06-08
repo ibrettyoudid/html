@@ -133,7 +133,7 @@ table.fretclick
         <tr><td height=40></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
     </table>
     <table id=notes>
-        <tr><td width="40">root</td><td width="40">m2</td><td width="40">2</td><td width="40">m3</td><td width="40">3</td><td width="40">4</td><td width="40">a4</td><td width="40">5</td><td width="40">m6</td><td width="40">6</td><td width="40">m7</td><td width="40">7</td><td width="40">M</td><td width="40">m</td><td width="40">7</td><td width="40">M7</td><td width="40">m7</td><td width="40">sus2</td><td width="40">sus4</td></tr>
+        <tr><td width="40">root</td><td width="40">m2</td><td width="40">2</td><td width="40">m3</td><td width="40">3</td><td width="40">4</td><td width="40">a4</td><td width="40">5</td><td width="40">m6</td><td width="40">6</td><td width="40">m7</td><td width="40">7</td><td width="40"></td><td width="40"></td><td width="40"></td><td width="40"></td><td width="40"></td><td width="40"></td><td width="40"></td></tr>
         <tr><td>8</td><td>b9</td><td>9</td><td>b10</td><td>10</td><td>11</td><td>#11</td><td>12</td><td>b13</td><td>13</td><td>b14</td><td>14</td></tr>
         <tr><td height="40">A</td><td>A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>.</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td height="40">A#</td><td>B</td><td>C</td><td>C#</td><td>D</td><td>D#</td><td>E</td><td>F</td><td>F#</td><td>G</td><td>G#</td><td>A</td><td>.</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -199,7 +199,7 @@ table.fretclick
     let lit   = [ 1 ,  0  ,  0 ,  2  ,  0 ,   0 ,  0  ,  3 ,  0  ,  0 ,  0  ,  0 ];
     let tuning = [7, 2, 10, 5, 0, 7];
     let colours = ["white", "#ff8080", "#80ff80", "#8080ff", "#80ffff", "#808080", "#ffff80"];
-    let chords = [["M", 0, 4, 7], ["m", 0, 3, 7], ["7", 0, 4, 7, 10], ["M7", 0, 4, 7, 11], ["m7", 0, 3, 7, 10], ["sus2", 0, 2, 7], ["sus4", 0, 5, 7]];
+    let chords = [["M", 0, 4, 7], ["m", 0, 3, 7], ["7", 0, 4, 7, 10], ["M7", 0, 4, 7, 11], ["m7", 0, 3, 7, 10], ["sus2", 0, 2, 7], ["sus4", 0, 5, 7], ["6", 0, 4, 7, 9], ["m6", 0, 3, 7, 9]];
     let fretboard = document.getElementById("fretboard");
     let notegrid  = document.getElementById("notes");
     let chordfretgrid = document.getElementById("chordfret");
@@ -228,7 +228,7 @@ table.fretclick
             {
                 let n = noteat(x, y);
                 let cell = fretclick.rows[y].cells[x];
-                cell.onclick = lightnote(n);
+                cell.onclick = choosefret(x, y);
             }
         }
         for (let y = 0; y < 12; ++y)
@@ -483,7 +483,19 @@ table.fretclick
             for (let n = 1; n < chord.length; ++n) lit[(chord[n]+transpose) % 12] = n;
             donotes();
         }
+
         return go;
+    }
+    function choosefret(fret, string)
+    {
+        if (multifret)
+        {
+            stringfretflag[string][fret] = stringfretflag[string][fret] == 0;
+        }        
+        else
+        {
+            stringfret[string] = fret;
+        }
     }
     for (let y = 0; y < 40; ++y)
     {
